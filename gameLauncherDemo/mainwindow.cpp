@@ -58,8 +58,13 @@ void MainWindow::on_pushButton_clicked()
     wchar_t wtext[150];
     mbstowcs(wtext, text, strlen(text)+1);
     LPWSTR game = wtext;
-    label.raise();
+
     launchGame(game);
+}
+
+void MainWindow::on_pushButton_2_released()
+{
+    ui->label->raise();
 }
 
 void MainWindow::on_pushButton_2_clicked()
@@ -68,6 +73,8 @@ void MainWindow::on_pushButton_2_clicked()
     wchar_t wtext[150];
     mbstowcs(wtext, text, strlen(text)+1);
     LPWSTR game = wtext;
-
+    ui->label->raise();
     launchGame(game);
 }
+
+

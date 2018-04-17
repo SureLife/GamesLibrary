@@ -66,7 +66,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../Downloads/pexels-photo-255379.jpeg</pixmap>
+     <pixmap>../../Downloads/giphy.gif</pixmap>
     </property>
    </widget>
    <zorder>label</zorder>
