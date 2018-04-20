@@ -52,6 +52,11 @@ LPWSTR launchGame(LPWSTR gameSelected) {
 
 }
 
+void QLabel::setMovie(QMovie *movie)
+{
+
+}
+
 void MainWindow::on_pushButton_clicked()
 {
     char text[] = "C:\\Users\\GamesLibrary\\Documents\\CollapsingWorlds\\CollapsingWorlds.exe";
@@ -60,11 +65,7 @@ void MainWindow::on_pushButton_clicked()
     LPWSTR game = wtext;
 
     launchGame(game);
-}
-
-void MainWindow::on_pushButton_2_released()
-{
-    ui->label->raise();
+    ui->label->lower();
 }
 
 void MainWindow::on_pushButton_2_clicked()
@@ -73,8 +74,20 @@ void MainWindow::on_pushButton_2_clicked()
     wchar_t wtext[150];
     mbstowcs(wtext, text, strlen(text)+1);
     LPWSTR game = wtext;
-    ui->label->raise();
+
     launchGame(game);
+    ui->label->lower();
+}
+
+void MainWindow::on_pushButton_pressed()
+{
+    ui->label->raise();
+
+}
+
+void MainWindow::on_pushButton_2_pressed()
+{
+    ui->label->raise();
 }
 
 
